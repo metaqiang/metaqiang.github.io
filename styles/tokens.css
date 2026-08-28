@@ -1,0 +1,13 @@
+:root {
+  --font-en: 'Space Grotesk Variable';
+  --font-zh: 'Noto Sans SC Variable';
+  --font-mono: 'JetBrains Mono Variable';
+  --blue: #286bb6;
+  --blue-dark: #205791;
+  --ink: #111820;
+  --muted: #5b6672;
+  --line: #1b252f;
+  --soft-line: #cbd3da;
+  --paper: #fbfcfa;
+  --max-width: 1180px;
+}
