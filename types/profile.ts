@@ -31,6 +31,7 @@ export type Milestone = {
   titleLink?: SiteLink;
   logo?: EventLogo;
   tags?: string[];
+  links?: SiteLink[];
   description?: ReactNode;
   papers?: EventPaper[];
 };

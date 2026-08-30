@@ -47,9 +47,22 @@
 }
 
 .site {
+  position: relative;
+  z-index: 1;
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto;
   padding: 46px 0 86px;
+}
+
+.site-shell {
+  display: grid;
+  grid-template-columns: 286px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.site-content {
+  min-width: 0;
 }
 
 .frame {
@@ -75,6 +88,8 @@
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   color: #5e6871;
   background: white;
   border-top: 1px solid var(--line);

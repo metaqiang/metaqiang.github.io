@@ -48,26 +48,37 @@ function EventTags({ tags }: { tags?: string[] }) {
 }
 
 function EventSummary({ item }: { item: Milestone }) {
-  const logoClassName = [
-    'event-summary',
+  const summaryMainClassName = [
+    'event-summary-main',
     item.logo && 'has-logo',
     item.logo?.square && 'has-square-logo',
   ].filter(Boolean).join(' ');
 
   return (
-    <div className={logoClassName}>
-      {item.logo && (
-        <span className={`event-logo${item.logo.square ? ' event-logo-square' : ''}`}>
-          <Image src={item.logo.src} alt={item.logo.alt} width={256} height={112} />
-        </span>
-      )}
-      <div className="event-copy">
-        <h3>
-          <MilestoneTitle title={item.title} link={item.titleLink} />
-          <EventTags tags={item.tags} />
-        </h3>
-        {item.description && <span className="milestone-description">{item.description}</span>}
+    <div className="event-summary">
+      <div className={summaryMainClassName}>
+        {item.logo && (
+          <span className={`event-logo${item.logo.square ? ' event-logo-square' : ''}`}>
+            <Image src={item.logo.src} alt={item.logo.alt} width={256} height={112} />
+          </span>
+        )}
+        <div className="event-copy">
+          <h3>
+            <MilestoneTitle title={item.title} link={item.titleLink} />
+            <EventTags tags={item.tags} />
+          </h3>
+          {item.description && <span className="milestone-description">{item.description}</span>}
+        </div>
       </div>
+      {item.links && (
+        <div className="event-links event-summary-links">
+          {item.links.map((link) => (
+            <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+              {link.label} ↗
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
