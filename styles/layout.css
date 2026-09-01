@@ -68,7 +68,7 @@
 .frame {
   margin-bottom: 34px;
   border: 1.5px solid var(--line);
-  background: rgba(255, 255, 255, .94);
+  background: rgba(251, 252, 250, .72);
   box-shadow: 6px 6px 0 rgba(34, 55, 70, .055);
 }
 

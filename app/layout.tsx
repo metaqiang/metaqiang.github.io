@@ -10,7 +10,7 @@ import '@/styles/responsive.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://metaqiang.github.io'),
-  title: 'Yuanqiang Yu',
+  title: 'Yuanqiang Yu — Homepage',
   description: 'Applied research scientist working on LLM agents, reinforcement learning, memory systems, and skill routing.',
   applicationName: 'Yuanqiang Yu',
   authors: [{ name: 'Yuanqiang Yu', url: 'https://metaqiang.github.io' }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   keywords: ['Yuanqiang Yu', 'LLM Agents', 'Reinforcement Learning', 'Machine Learning', 'Alibaba', 'Tianjin University'],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Yuanqiang Yu',
+    title: 'Yuanqiang Yu — Homepage',
     description: 'Applied research scientist building agents that remember, reason, and improve.',
     url: 'https://metaqiang.github.io',
     siteName: 'Yuanqiang Yu',
@@ -27,11 +27,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yuanqiang Yu',
+    title: 'Yuanqiang Yu — Homepage',
     description: 'Applied research scientist building agents that remember, reason, and improve.',
     images: ['/og.png'],
   },
-  icons: { icon: '/yuanqiang-yu-portrait.jpg' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

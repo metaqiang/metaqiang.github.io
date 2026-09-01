@@ -36,7 +36,7 @@ export const profile = {
 export const aboutContent = (
   <>
     <p>
-      I am an Applied Research Scientist at <a href={siteLinks.alibaba} target="_blank" rel="noreferrer">Alibaba Group</a>, where I work on LLM agent systems. My current research focuses on LLM post-training, agent memory, and reliable long-horizon task execution. Previously, at <a href={siteLinks.huawei} target="_blank" rel="noreferrer">Huawei</a>, I worked on the <a href={siteLinks.mindSpore} target="_blank" rel="noreferrer">MindSpore</a> framework, the <a href={siteLinks.mindRlhf} target="_blank" rel="noreferrer">MindRLHF</a> training framework, and the MetaERP agent.
+      I am an Applied Research Scientist at <a href={siteLinks.alibaba} target="_blank" rel="noreferrer">Alibaba Group</a>, where I work on LLM agent systems. My current research focuses on LLM post-training, agent memory, and reliable long-horizon task execution. Previously, at <a href={siteLinks.huawei} target="_blank" rel="noreferrer">Huawei</a>, I contributed to <a href={siteLinks.mindSpore} target="_blank" rel="noreferrer">MindSpore</a>, a deep learning framework; <a href={siteLinks.mindRlhf} target="_blank" rel="noreferrer">MindRLHF</a>, a large-scale RLHF training framework; and the MetaERP agent, which streamlines invoice reconciliation and validation for accountants.
     </p>
     <p>
       I received my M.Sc. in Computer Science and Technology from Tianjin University under <a href={siteLinks.jianyeHaoScholar} target="_blank" rel="noreferrer">Prof. Jianye Hao</a>. My early research focused primarily on deep reinforcement learning, transfer learning, and multi-task reinforcement learning.

@@ -10,7 +10,10 @@ export const milestones: Milestone[] = [
       {
         title: 'PAC: Progress-Augmented Advantage Curriculum for Multi-Task Reinforcement Learning of LLMs',
         authors: 'Yuanqiang Yu, Yanzhao Zheng, Zhentao Zhang, Tianze Xu, Chao Ma, Jihuai Zhu, Jiashun Liu, Xinle Deng, Baohua Dong, Hangcheng Zhu, and Ruohui Huang',
-        links: [],
+        links: [
+          { label: 'Paper', href: 'https://arxiv.org/abs/2608.30528' },
+          { label: 'GitHub', href: 'https://github.com/metaqiang/pac-curricula' },
+        ],
       },
       {
         title: 'Counterfactual Constraint-Conditioned On-Policy Distillation for Multi-Constraint Instruction Following',
@@ -52,14 +55,14 @@ export const milestones: Milestone[] = [
   },
   {
     date: { iso: '2025-10', label: 'Oct 2025' },
-    title: 'I joined Alibaba Group in Hangzhou, China',
+    title: 'Joined Alibaba Group in Hangzhou, China',
     titleLink: { label: 'Alibaba Group', href: siteLinks.alibaba },
     logo: { src: '/institutions/alibaba.png', alt: 'Alibaba Group logo' },
     description: 'Applied Research Scientist · Oct 2025 — Present.',
   },
   {
     date: { iso: '2023-06', label: 'Jun 2023' },
-    title: 'I joined Huawei in Shenzhen, China',
+    title: 'Joined Huawei in Shenzhen, China',
     titleLink: { label: 'Huawei', href: siteLinks.huawei },
     logo: { src: '/institutions/huawei.png', alt: 'Huawei logo' },
     description: 'Machine Learning Engineer · MetaERP agent · Jun 2023 — Oct 2025.',
