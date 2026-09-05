@@ -13,11 +13,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   color: var(--ink);
-  background-color: var(--paper);
+  background-color: #fff;
   background-image:
-    linear-gradient(rgba(28, 48, 64, .065) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28, 48, 64, .065) 1px, transparent 1px);
-  background-size: 42px 42px;
+    linear-gradient(rgba(148, 163, 184, .065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, .065) 1px, transparent 1px);
+  background-size: 24px 24px;
   font-family: var(--font-en), var(--font-zh), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -25,53 +25,70 @@ body {
 }
 
 .ambient-background {
-  position: fixed;
+  position: absolute;
   z-index: 0;
-  inset: 68px 0 0;
+  inset: 0;
   overflow: hidden;
   pointer-events: none;
+  opacity: .82;
+  mask-image: linear-gradient(90deg, transparent 2%, rgba(0, 0, 0, .82) 18%, #000 82%, transparent 98%);
 }
 
-.ambient-background span {
+.ambient-wave {
   position: absolute;
-  width: 88px;
-  aspect-ratio: 1;
-  border: 1px solid rgba(224, 149, 72, .28);
-  background: rgba(237, 176, 102, .045);
-  box-shadow: 0 0 22px rgba(224, 149, 72, .055);
-  animation: ambient-drift-a 20s ease-in-out infinite alternate;
+  inset: 0;
+  animation: ambient-wave-flow 22s steps(12, end) infinite alternate;
   will-change: transform;
 }
 
-.ambient-background span:nth-child(1) { top: 3%; left: 4%; width: 78px; animation-duration: 17s; animation-delay: -8s; }
-.ambient-background span:nth-child(2) { top: 11%; left: 12%; width: 96px; animation-name: ambient-drift-b; animation-duration: 23s; animation-delay: -13s; }
-.ambient-background span:nth-child(3) { top: 20%; left: 22%; width: 82px; animation-name: ambient-drift-c; animation-duration: 19s; animation-delay: -4s; }
-.ambient-background span:nth-child(4) { top: 27%; left: 33%; width: 108px; animation-duration: 25s; animation-delay: -18s; }
-.ambient-background span:nth-child(5) { top: 31%; left: 46%; width: 92px; animation-name: ambient-drift-b; animation-duration: 21s; animation-delay: -7s; }
-.ambient-background span:nth-child(6) { top: 29%; left: 59%; width: 104px; animation-name: ambient-drift-c; animation-duration: 27s; animation-delay: -15s; }
-.ambient-background span:nth-child(7) { top: 21%; left: 71%; width: 86px; animation-duration: 18s; animation-delay: -9s; }
-.ambient-background span:nth-child(8) { top: 10%; left: 82%; width: 98px; animation-name: ambient-drift-b; animation-duration: 24s; animation-delay: -5s; }
-.ambient-background span:nth-child(9) { top: 2%; left: 91%; width: 74px; animation-name: ambient-drift-c; animation-duration: 20s; animation-delay: -12s; }
-.ambient-background span:nth-child(10) { top: 58%; left: 8%; width: 64px; animation-name: ambient-drift-b; animation-duration: 26s; animation-delay: -16s; }
-.ambient-background span:nth-child(11) { top: 69%; left: 67%; width: 72px; animation-name: ambient-drift-c; animation-duration: 22s; animation-delay: -11s; }
-.ambient-background span:nth-child(12) { top: 82%; left: 88%; width: 84px; animation-duration: 28s; animation-delay: -20s; }
-
-@keyframes ambient-drift-a {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  48% { transform: translate3d(22px, 15px, 0) rotate(2deg); }
-  100% { transform: translate3d(-14px, 34px, 0) rotate(-1deg); }
+.ambient-wave i {
+  position: absolute;
+  width: clamp(40px, 4.2vw, 68px);
+  height: clamp(28px, 3vw, 48px);
+  margin-top: calc(clamp(28px, 3vw, 48px) / -2);
+  display: block;
+  border: 1px solid rgba(25, 113, 194, .24);
+  background: rgba(25, 113, 194, .075);
+  box-shadow: 2px 2px rgba(25, 113, 194, .055);
+  animation: ambient-block-float 11s steps(9, end) infinite alternate;
+  will-change: transform;
 }
 
-@keyframes ambient-drift-b {
-  0% { transform: translate3d(0, 0, 0) rotate(1deg); }
-  52% { transform: translate3d(-24px, 20px, 0) rotate(-2deg); }
-  100% { transform: translate3d(16px, -18px, 0) rotate(1deg); }
+.ambient-wave i:nth-child(2n) {
+  opacity: .62;
 }
 
-@keyframes ambient-drift-c {
-  0% { transform: translate3d(0, 0, 0) rotate(-1deg); }
-  44% { transform: translate3d(18px, -16px, 0) rotate(2deg); }
-  100% { transform: translate3d(-20px, 26px, 0) rotate(0deg); }
+.ambient-wave-green {
+  animation-duration: 27s;
+  animation-direction: alternate-reverse;
+}
+
+.ambient-wave-green i {
+  border-color: rgba(47, 158, 68, .18);
+  background: rgba(47, 158, 68, .055);
+  box-shadow: 2px 2px rgba(47, 158, 68, .04);
+  animation-direction: alternate-reverse;
+}
+
+.ambient-wave-gold {
+  animation-duration: 24s;
+}
+
+.ambient-wave-gold i {
+  border-color: rgba(240, 140, 0, .18);
+  background: rgba(240, 140, 0, .05);
+  box-shadow: 2px 2px rgba(240, 140, 0, .04);
+}
+
+@keyframes ambient-wave-flow {
+  from { transform: translateX(-2.4%); }
+  to { transform: translateX(2.4%); }
+}
+
+@keyframes ambient-block-float {
+  0% { transform: translateY(-10px) scale(.92); }
+  50% { transform: translateY(12px) scale(1.06); }
+  100% { transform: translateY(-4px) scale(.97); }
 }
 
 a {
@@ -122,7 +139,8 @@ h4 {
     scroll-behavior: auto;
   }
 
-  .ambient-background span {
+  .ambient-wave,
+  .ambient-wave i {
     animation: none;
   }
 }

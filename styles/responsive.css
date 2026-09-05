@@ -1,4 +1,8 @@
 @media (max-width: 980px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+  }
+
   .site-shell {
     grid-template-columns: 238px minmax(0, 1fr);
     gap: 22px;
@@ -20,12 +24,15 @@
 
   .sidebar-portrait {
     grid-row: 1;
-    padding: 18px;
+    width: 170px;
+    margin: 18px;
+    padding: 0;
   }
 
   .sidebar-profile-copy {
     align-self: center;
     padding: 0 18px;
+    text-align: left;
   }
 
   .profile-details {
@@ -33,12 +40,16 @@
     padding: 10px 24px 20px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 28px;
+    gap: 9px 28px;
   }
 
   .profile-facts,
   .profile-links {
     display: contents;
+  }
+
+  .profile-facts dd {
+    white-space: nowrap;
   }
 }
 
@@ -53,15 +64,21 @@
 
   .nav {
     width: calc(100% - 24px);
-    height: 60px;
+    min-height: 60px;
   }
 
   .brand {
-    font-size: 13px;
+    font-size: 11px;
+  }
+
+  .nav-links {
+    gap: 2px;
   }
 
   .nav-links a {
-    display: none;
+    min-height: 28px;
+    padding: 6px 5px;
+    font-size: 9px;
   }
 
   .site {
@@ -71,7 +88,7 @@
 
   .frame {
     margin-bottom: 22px;
-    box-shadow: 4px 4px 0 rgba(34, 55, 70, .055);
+    box-shadow: none;
   }
 
   .profile-sidebar {
@@ -81,7 +98,9 @@
 
   .sidebar-portrait {
     grid-row: 1;
-    padding: 12px;
+    width: 96px;
+    margin: 12px;
+    padding: 0;
   }
 
   .sidebar-profile-copy {
@@ -117,8 +136,8 @@
   }
 
   .section-header {
-    min-height: 78px;
-    padding: 18px 22px;
+    min-height: 0;
+    padding: 8px 0 20px;
   }
 
   .section-header h2 {
@@ -126,7 +145,7 @@
   }
 
   .about-grid > div {
-    padding: 20px 22px;
+    padding: 0;
   }
 
   .about-grid p {
@@ -135,7 +154,7 @@
   }
 
   .timeline {
-    padding: 8px 20px 20px;
+    padding: 0;
   }
 
   .timeline-row {
@@ -226,14 +245,37 @@
   }
 }
 
+@media (max-width: 520px) {
+  .profile-details {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding-inline: 18px;
+  }
+
+  .profile-facts,
+  .profile-links {
+    grid-column: 1;
+    padding: 0;
+    display: grid;
+    align-content: start;
+    gap: 9px;
+  }
+
+  .profile-facts div,
+  .profile-links a {
+    width: 100%;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .profile-facts dd {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 390px) {
   .profile-sidebar {
     grid-template-columns: 110px 1fr;
-  }
-
-  .profile-facts div {
-    grid-template-columns: 47px 1fr;
-    padding-inline: 7px;
   }
 }
 

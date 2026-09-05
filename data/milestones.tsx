@@ -113,7 +113,7 @@ export const milestones: Milestone[] = [
     date: { iso: '2020-09', label: 'Sep 2020' },
     title: 'Began M.Sc. studies at Tianjin University',
     logo: { src: '/institutions/tianjin-university-emblem.png', alt: 'Tianjin University emblem', square: true },
-    tags: ['985', '211', 'Double First-Class'],
+    tags: ['985', '211'],
     description: <>Computer Science & Technology · Advised by <a href={siteLinks.jianyeHaoScholar} target="_blank" rel="noreferrer">Prof. Jianye Hao</a>.</>,
   },
   {
@@ -121,12 +121,6 @@ export const milestones: Milestone[] = [
     title: 'Received First Prize in CUMCM',
     links: [{ label: 'Certificate', href: '/attachments/CUMCM.pdf' }],
     description: 'China Undergraduate Mathematical Contest in Modeling.',
-  },
-  {
-    date: { iso: '2018-04', label: 'Apr 2018' },
-    title: 'We published 《数学建模方法入门及其应用》',
-    links: [{ label: 'Book', href: siteLinks.book }],
-    description: 'Edited by Xiaoyin Wang et al. · China Science Publishing & Media Ltd. · ISBN 9787030569578.',
   },
   {
     date: { iso: '2018-02', label: 'Feb 2018' },
@@ -138,7 +132,6 @@ export const milestones: Milestone[] = [
     date: { iso: '2016-09', label: 'Sep 2016' },
     title: 'Began B.Eng. studies at Tiangong University',
     logo: { src: '/institutions/tiangong-university-emblem.png', alt: 'Tiangong University emblem', square: true },
-    tags: ['Double First-Class'],
     description: 'Computer Science & Technology.',
   },
 ];

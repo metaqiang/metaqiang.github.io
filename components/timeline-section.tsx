@@ -1,4 +1,13 @@
 import Image from 'next/image';
+import {
+  Award,
+  BookOpen,
+  Code2,
+  ExternalLink,
+  FileText,
+  Github,
+  type LucideIcon,
+} from 'lucide-react';
 
 import { milestones } from '@/data/milestones';
 import type { EventPaper, Milestone, SiteLink } from '@/types/profile';
@@ -6,6 +15,25 @@ import type { EventPaper, Milestone, SiteLink } from '@/types/profile';
 import { SectionHeader } from './section-header';
 
 const CURRENT_AUTHOR = 'Yuanqiang Yu';
+
+const eventLinkIcons: Record<string, LucideIcon> = {
+  Book: BookOpen,
+  Certificate: Award,
+  Code: Code2,
+  GitHub: Github,
+  Paper: FileText,
+};
+
+function EventLink({ link }: { link: SiteLink }) {
+  const Icon = eventLinkIcons[link.label] ?? ExternalLink;
+
+  return (
+    <a href={link.href} target="_blank" rel="noreferrer">
+      <Icon aria-hidden="true" size={13} strokeWidth={1.9} />
+      <span>{link.label}</span>
+    </a>
+  );
+}
 
 function AuthorList({ authors }: Pick<EventPaper, 'authors'>) {
   const parts = authors.split(CURRENT_AUTHOR);
@@ -73,9 +101,7 @@ function EventSummary({ item }: { item: Milestone }) {
       {item.links && (
         <div className="event-links event-summary-links">
           {item.links.map((link) => (
-            <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
-              {link.label} ↗
-            </a>
+            <EventLink link={link} key={link.href} />
           ))}
         </div>
       )}
@@ -97,9 +123,7 @@ function EventPapers({ papers }: { papers?: EventPaper[] }) {
           {paper.links.length > 0 && (
             <div className="event-links">
               {paper.links.map((link) => (
-                <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
-                  {link.label} ↗
-                </a>
+                <EventLink link={link} key={link.href} />
               ))}
             </div>
           )}

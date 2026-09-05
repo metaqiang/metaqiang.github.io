@@ -2,12 +2,13 @@
   --font-en: 'Space Grotesk Variable';
   --font-zh: 'Noto Sans SC Variable';
   --font-mono: 'JetBrains Mono Variable';
-  --blue: #286bb6;
-  --blue-dark: #205791;
-  --ink: #111820;
-  --muted: #5b6672;
-  --line: #1b252f;
-  --soft-line: #cbd3da;
-  --paper: #fbfcfa;
+  --blue: #1971c2;
+  --blue-dark: #145a9c;
+  --ink: #0f1720;
+  --muted: #52616b;
+  --line: #d5d8d4;
+  --soft-line: #e3e7e4;
+  --paper: #ffffff;
+  --pixel-shadow: #dfe5eb;
   --max-width: 1280px;
 }
