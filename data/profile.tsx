@@ -17,7 +17,7 @@ export const profile = {
   name: 'Yuanqiang Yu',
   role: 'Applied Research Scientist',
   portrait: {
-    src: '/yuanqiang-yu-portrait.jpg',
+    src: '/yuanqiang-yu-portrait.png',
     alt: 'Portrait of Yuanqiang Yu',
   },
   actions: [

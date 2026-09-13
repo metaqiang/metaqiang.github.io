@@ -31,8 +31,8 @@ export function ProfileSidebar() {
         <Image
           src={profile.portrait.src}
           alt={profile.portrait.alt}
-          width={680}
-          height={720}
+          width={1254}
+          height={1254}
           priority
         />
       </div>
