@@ -69,7 +69,7 @@ export const milestones: Milestone[] = [
   },
   {
     date: { iso: '2023-02', label: 'Feb 2023' },
-    title: 'One paper accepted to AAMAS',
+    title: 'One paper accepted to AAMAS 2023',
     description: 'Autonomous Agents and Multi-Agent Systems.',
     papers: [{
       title: 'Accelerating Deep Reinforcement Learning via Knowledge-Guided Policy Network',

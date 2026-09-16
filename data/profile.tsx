@@ -11,6 +11,7 @@ export const siteLinks = {
   linkedin: 'https://cn.linkedin.com/in/yuanqiang-yu-b22457297',
   mindRlhf: 'https://gitee.com/mindspore/mindrlhf',
   mindSpore: 'https://gitee.com/mindspore/mindspore',
+  zhihu: 'https://www.zhihu.com/people/yu-yuan-qiang',
 } as const;
 
 export const profile = {
@@ -25,6 +26,7 @@ export const profile = {
     { label: 'GitHub', href: siteLinks.github },
     { label: 'Google Scholar', href: siteLinks.googleScholar },
     { label: 'LinkedIn', href: siteLinks.linkedin },
+    { label: 'Zhihu', href: siteLinks.zhihu },
   ] satisfies SiteLink[],
   facts: [
     { label: 'COMPANY', value: 'Alibaba Group' },
@@ -40,6 +42,9 @@ export const aboutContent = (
     </p>
     <p>
       I received my M.Sc. in Computer Science and Technology from Tianjin University under <a href={siteLinks.jianyeHaoScholar} target="_blank" rel="noreferrer">Prof. Jianye Hao</a>. My early research focused primarily on deep reinforcement learning, transfer learning, and multi-task reinforcement learning.
+    </p>
+    <p>
+      Outside of research, I enjoy photography, solving Rubik’s cubes, and traveling.
     </p>
   </>
 );

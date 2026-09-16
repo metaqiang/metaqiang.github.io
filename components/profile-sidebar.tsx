@@ -6,6 +6,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  MessageCircle,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -16,6 +17,7 @@ const actionIcons: Record<string, LucideIcon> = {
   GitHub: Github,
   'Google Scholar': GraduationCap,
   LinkedIn: Linkedin,
+  Zhihu: MessageCircle,
 };
 
 function isExternalLink(href: string) {
