@@ -21,7 +21,7 @@ export function ProfileSidebar() {
           <span className="portrait-label">HELLO, WORLD.</span>
         </div>
         <div className="sidebar-profile-copy">
-          <h1>{profile.name}<span className="sidebar-name-zh" lang="zh-Hans">{profile.nameZh}</span></h1>
+          <h1>{profile.name}</h1>
           <p className="sidebar-role">{profile.role}</p>
         </div>
         <div className="profile-details">

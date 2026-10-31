@@ -71,6 +71,7 @@ export const publications: Publication[] = [
     links: [
       { label: 'ACL', detail: 'Paper', href: 'https://aclanthology.org/2026.emnlp-main.1037/', kind: 'paper' },
       { label: 'arXiv', detail: '2609.27421', href: 'https://arxiv.org/abs/2609.27421', kind: 'paper' },
+      { label: 'GitHub', detail: 'Code', href: 'https://github.com/zhengyanzhao1997/cc-opd', kind: 'code' },
     ],
     bibtex: `@inproceedings{zheng-etal-2026-counterfactual,
   title = {Counterfactual Constraint-Conditioned On-Policy Distillation for Multi-Constraint Instruction Following},
@@ -96,6 +97,7 @@ export const publications: Publication[] = [
     abstract: 'Reusable skills let LLM agents package task-specific procedures, tool affordances, and execution guidance into modular building blocks. As skill ecosystems grow to tens of thousands of entries, exposing every skill at inference time becomes infeasible. This creates a skill-routing problem: given a user task, the system must identify relevant skills before downstream planning or execution. Existing agent stacks often rely on progressive disclosure, exposing only skill names and descriptions while hiding the full implementation body. We examine this design choice on a SkillsBench-derived benchmark with approximately 80K candidate skills, targeting the practically important setting of large skill registries with heavy overlap. Across representative dense and reranking baselines on this setting, hiding the skill body causes a 37–44 percentage point drop in routing accuracy. Stronger controls show that the missing signal is body-resident rather than a simple length artifact: body-distilled descriptions recover part of the gap, but remain 7–21 points below direct all-field routing, while a metadata-only encoder trained with the same data remains 14.0 points below its all-field counterpart. Motivated by this finding, we present SKILLROUTER, a compact 1.2B body-aware retrieve-and-rerank pipeline. SKILLROUTER achieves 74.0% Hit@1 on our benchmark—the strongest average top-1 routing performance among the baselines we evaluate—while using 13× fewer parameters and running 5.8× faster than the strongest base pipeline. The ranking gains further generalize to a supplementary benchmark independently constructed from three skill sources. In a complementary end-to-end study across four coding agents, routing gains transfer to improved task success, with larger gains for more capable agents.',
     abstractSource: 'https://proceedings.colm.cc/paper_files/paper/2026/file/7eca17ef54789b0663cab421f2e9dbf5-Paper-Conference.pdf',
     links: [
+      { label: 'COLM', detail: 'Paper', href: 'https://proceedings.colm.cc/paper_files/paper/2026/hash/7eca17ef54789b0663cab421f2e9dbf5-Abstract-Conference.html', kind: 'paper' },
       { label: 'arXiv', detail: '2603.22455', href: 'https://arxiv.org/abs/2603.22455', kind: 'paper' },
       { label: 'GitHub', detail: 'Code', href: 'https://github.com/zhengyanzhao1997/SkillRouter', kind: 'code' },
     ],
@@ -121,6 +123,7 @@ export const publications: Publication[] = [
     abstract: 'LLM-based agents show strong potential for long-horizon reasoning, yet their context size is limited by deployment factors (e.g., memory, latency, and cost), yielding a constrained context budget. As interaction histories grow, this induces a trade-off between retaining past information and staying within the context limit. To address this challenge, we propose Budget-Aware Context Management (BACM), which formulates context management as a sequential decision problem with a context budget constraint. It enables agents to assess the available budget before incorporating new observations and decide when and how much of the interaction history to compress. We further develop BACM-RL, an end-to-end curriculum-based reinforcement learning approach that learns compression strategies under varying context budgets. Experiments on compositional multi-objective QA and long-horizon web browsing benchmarks show that BACM-RL consistently outperforms prior methods across model scales and task complexities, achieving over 1.6× gains over strong baselines in high-complexity settings, while maintaining strong advantages as budgets shrink, where most methods exhibit a downward performance trend.',
     abstractSource: 'https://proceedings.colm.cc/paper_files/paper/2026/file/f1320d2e2842169c6fc89dcbd80e94d0-Paper-Conference.pdf',
     links: [
+      { label: 'COLM', detail: 'Paper', href: 'https://proceedings.colm.cc/paper_files/paper/2026/hash/f1320d2e2842169c6fc89dcbd80e94d0-Abstract-Conference.html', kind: 'paper' },
       { label: 'arXiv', detail: '2604.01664', href: 'https://arxiv.org/abs/2604.01664', kind: 'paper' },
       { label: 'GitHub', detail: 'Code', href: 'https://github.com/yw-0311/ContextBudget', kind: 'code' },
     ],
@@ -132,7 +135,7 @@ export const publications: Publication[] = [
   eprint = {2604.01664},
   archivePrefix = {arXiv},
   primaryClass = {cs.AI},
-  url = {https://arxiv.org/abs/2604.01664}
+  url = {https://proceedings.colm.cc/paper_files/paper/2026/hash/f1320d2e2842169c6fc89dcbd80e94d0-Abstract-Conference.html}
 }`,
   },
   {
@@ -146,6 +149,7 @@ export const publications: Publication[] = [
     abstract: 'Rubric-based Reinforcement Learning (RL) has emerged as a promising approach for aligning Large Language Models (LLMs) with complex, open-domain instruction following tasks. However, existing methods predominantly rely on response-level rewards, introducing severe reward sparsity and reward ambiguity problems. To address these issues, we propose Rubrics to Tokens (RTT), a novel rubric-based RL framework that bridges coarse response-level scores and fine-grained token-level credit assignment. RTT introduces a Token-Level Relevance Discriminator to predict which tokens in the response are responsible for a specific constraint, and optimizes the policy model via RTT-GRPO, which integrates response-level and token-level advantages within a unified framework. Furthermore, we identify the Group Partitioning Problem when transitioning from one-dimensional, outcome-level reward to three-dimensional reward space in the token-level rubric-based RL, and propose a novel group normalization method, called Intra-sample Token Group Normalization, to accommodate this shift. Extensive experiments demonstrate that RTT consistently outperforms all baselines in both instruction-level and rubric-level accuracy across different models. We open-source our RTT framework to facilitate future research: https://github.com/TURLEing/Rubrics-To-Tokens.',
     abstractSource: 'https://proceedings.colm.cc/paper_files/paper/2026/file/ae0509bfd3e0c2414164209949708e4e-Paper-Conference.pdf',
     links: [
+      { label: 'COLM', detail: 'Paper', href: 'https://proceedings.colm.cc/paper_files/paper/2026/hash/ae0509bfd3e0c2414164209949708e4e-Abstract-Conference.html', kind: 'paper' },
       { label: 'arXiv', detail: '2604.02795', href: 'https://arxiv.org/abs/2604.02795', kind: 'paper' },
       { label: 'GitHub', detail: 'Code', href: 'https://github.com/TURLEing/Rubrics-To-Tokens', kind: 'code' },
     ],

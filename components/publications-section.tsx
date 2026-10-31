@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { AlignLeft, ArrowUpRight, Award, Bookmark, Check, ChevronDown, Code2, Copy, Download, FileText, Globe, Maximize2, X } from 'lucide-react';
+import { AlignLeft, ArrowUpRight, Award, Bookmark, Check, Code2, Copy, Download, FileText, Globe, Maximize2, X } from 'lucide-react';
 import { publications, type Publication } from '@/data/publications';
 import { SectionHeader } from './section-header';
 
@@ -79,8 +79,8 @@ function PublicationCard({ paper }: { paper: Publication }) {
               { value: 'abstract', label: 'Abstract', Icon: AlignLeft },
               { value: 'bibtex', label: 'BibTeX', Icon: Bookmark },
             ] as const).map(({ value, label, Icon }) => (
-              <button key={value} className={`paper-toggle${panel === value ? ' is-open' : ''}`} type="button" aria-expanded={panel === value} aria-controls={`details-${paper.id}`} onClick={() => togglePanel(value)}>
-                <Icon size={15} aria-hidden="true" /><span>{label}</span><ChevronDown className="disclosure-chevron" size={13} aria-hidden="true" />
+              <button key={value} className={`resource-link resource-code paper-toggle${panel === value ? ' is-open' : ''}`} type="button" aria-expanded={panel === value} aria-controls={`details-${paper.id}`} onClick={() => togglePanel(value)}>
+                <span className="resource-label"><Icon size={15} aria-hidden="true" /></span><span className="resource-detail">{label}</span>
               </button>
             ))}
           </div>

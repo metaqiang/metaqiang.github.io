@@ -49,7 +49,6 @@
   .portrait-label { left: 8px; bottom: -9px; font-size: 7px; padding: 2px 6px; }
   .sidebar-profile-copy { padding: 24px 14px 8px 18px; align-self: center; }
   .sidebar-profile-copy h1 { font-size: clamp(22px, 6vw, 30px); }
-  .sidebar-name-zh { margin-top: 5px; font-size: 14px; }
   .sidebar-role { margin-top: 6px; font-size: 11px; max-width: 160px; }
   .profile-details { grid-column: 1 / -1; padding: 23px 15px 16px; }
   .profile-facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 15px; }

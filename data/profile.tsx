@@ -15,7 +15,6 @@ export const siteLinks = {
 
 export const profile = {
   name: 'Yuanqiang Yu',
-  nameZh: '余元强',
   role: 'Applied Research Scientist',
   portrait: {
     src: '/yuanqiang-yu-portrait.png',
