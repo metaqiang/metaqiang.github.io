@@ -6,6 +6,9 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "generate:bib": "node --experimental-strip-types scripts/generate-bib.mjs",
+    "predev": "npm run generate:bib",
+    "prebuild": "npm run generate:bib",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
