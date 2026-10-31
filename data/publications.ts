@@ -70,6 +70,7 @@ export const publications: Publication[] = [
     award: 'Outstanding Paper',
     links: [
       { label: 'ACL', detail: 'Paper', href: 'https://aclanthology.org/2026.emnlp-main.1037/', kind: 'paper' },
+      { label: 'arXiv', detail: '2609.27421', href: 'https://arxiv.org/abs/2609.27421', kind: 'paper' },
     ],
     bibtex: `@inproceedings{zheng-etal-2026-counterfactual,
   title = {Counterfactual Constraint-Conditioned On-Policy Distillation for Multi-Constraint Instruction Following},
@@ -199,6 +200,7 @@ export const publications: Publication[] = [
     abstractSource: 'https://doi.org/10.1109/IJCNN54540.2023.10191536',
     links: [
       { label: 'Paper', detail: 'IEEE', href: 'https://doi.org/10.1109/IJCNN54540.2023.10191536', kind: 'paper' },
+      { label: 'arXiv', detail: '2608.30765', href: 'https://arxiv.org/abs/2608.30765', kind: 'paper' },
       { label: 'GitHub', detail: 'Code', href: 'https://github.com/metaqiang/t3s-multitask-rl', kind: 'code' },
     ],
     bibtex: `@inproceedings{yu2023t3s,
